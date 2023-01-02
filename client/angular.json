@@ -16,15 +16,13 @@
             "outputPath": "dist/client",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,6 +55,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "sslCert": "./ssl/server.crt",
+            "sslKey": "./ssl/server.key",
+            "ssl": true
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -77,18 +80,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }
