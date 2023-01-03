@@ -10,9 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AppUsersController : ControllerBase
+    public class AppUsersController : BaseApiController
     {
         private readonly DataContext _context;
 
