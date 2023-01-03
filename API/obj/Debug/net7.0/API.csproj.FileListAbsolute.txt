@@ -60,3 +60,11 @@ E:\UdemyCourses\Angular.NET\DatingApp\api\bin\Debug\net7.0\runtimes\win-arm64\na
 E:\UdemyCourses\Angular.NET\DatingApp\api\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\UdemyCourses\Angular.NET\DatingApp\api\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
 E:\UdemyCourses\Angular.NET\DatingApp\api\obj\Debug\net7.0\API.csproj.CopyComplete
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
