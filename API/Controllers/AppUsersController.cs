@@ -28,12 +28,21 @@ namespace API.Controllers
         //     var users = _context.appUsers.ToList();
         //     return users; 
         // }
-
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult<IEnumerable<AppUser>> GetUsers()
         {
             var users = _context.appUsers.ToList();
             return users;
         }
+
+
+        [HttpGet("{id}")]
+        public ActionResult<AppUser> GetUsers(int id)
+        {
+            return _context.appUsers.Find(id);
+
+        }
+
     }
 }
