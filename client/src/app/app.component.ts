@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { AccountService } from './_services/account.service';
 import { User } from './_models/use';
 @Component({
@@ -10,10 +9,7 @@ import { User } from './_models/use';
 export class AppComponent implements OnInit {
   title = 'client';
 
-  constructor(
-    private http: HttpClient,
-    private accountService: AccountService
-  ) {}
+  constructor(private accountService: AccountService) {}
 
   ngOnInit(): void {
     this.setCurrentUser();
