@@ -4,7 +4,7 @@
   <div class="container">
     <a class="navbar-brand" routerLink="/">Dating App</a>
     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-      <ng-container *ngIf="accountService.currentUser$ | async as abcd">
+      <ng-container *ngIf="accountService.currentUser$ | async">
         <li class="nav-item">
           <a class="nav-link" routerLink="/members" routerLinkActive="active">
             Matches</a
@@ -36,7 +36,7 @@
       <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle
         >Welcome {{ User.userName | titlecase }}</a
       >
-      <div class="dropdown-menu mt-3" *dropdownMenu>
+      <div class="dropdown-menu mt-2" *dropdownMenu>
         <a class="dropdown-item">Edit Profile</a>
         <a class="dropdown-item" (click)="logout()">Logout</a>
       </div>
