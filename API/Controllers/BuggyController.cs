@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -16,7 +17,7 @@ namespace API.Controllers
             _context = context;
 
         }
-
+        [Authorize]
         [HttpGet("auth")]
         public ActionResult<string> GetSecret()
         {
@@ -24,13 +25,13 @@ namespace API.Controllers
         }
 
         [HttpGet("not-found")]
-        public ActionResult<String> GetNotFound()
+        public ActionResult<AppUser> GetNotFound()
         {
             var thing = _context.appUsers.Find(-1);
 
-            var thingToReturn = thing.ToString();
+            if (thing == null) return NotFound();
 
-            return thingToReturn;
+            return thing;
 
         }
 
