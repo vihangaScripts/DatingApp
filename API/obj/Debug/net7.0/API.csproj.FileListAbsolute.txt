@@ -69,3 +69,5 @@ E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Data\UserSeedData.json
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\AutoMapper.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
