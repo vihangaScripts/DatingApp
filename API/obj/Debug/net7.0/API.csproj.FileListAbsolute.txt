@@ -68,3 +68,4 @@ E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\System.IdentityModel.
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\UdemyCourses\Angular.NET\DatingApp\API\bin\Debug\net7.0\Data\UserSeedData.json

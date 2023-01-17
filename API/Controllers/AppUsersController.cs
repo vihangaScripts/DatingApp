@@ -23,12 +23,6 @@ namespace API.Controllers
             _context = context;
         }
 
-        // [HttpGet]
-        // public Task< ActionResultIEnumerable<AppUser>>> GetUsers (){
-        //     var users = _context.appUsers.ToList();
-        //     return users; 
-        // }
-        [AllowAnonymous]
         [HttpGet]
         public ActionResult<IEnumerable<AppUser>> GetUsers()
         {
