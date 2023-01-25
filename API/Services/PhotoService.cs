@@ -2,7 +2,6 @@ using API.Helpers;
 using API.Interfaces;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
-using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.Extensions.Options;
 
 namespace API.Services
@@ -14,12 +13,11 @@ namespace API.Services
         public PhotoService(IOptions<CloudinarySettings> config)
         {
 
-            var acc = new Account(
-
-               config.Value.CloudName,
-               config.Value.ApiKey,
-               config.Value.ApiSecret
-
+            var acc = new Account
+            (
+                config.Value.CloudName,
+                config.Value.ApiKey,
+                config.Value.ApiSecret
             );
 
             _cloudinary = new Cloudinary(acc);
