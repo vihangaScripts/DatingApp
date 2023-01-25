@@ -33,6 +33,9 @@ export class MembersService {
     return this.http.put(this.baseUrl + 'appUsers', member).pipe(
       map(() => {
         const index = this.members.indexOf(member);
+
+        debugger;
+
         this.members[index] = { ...this.members[index], ...member };
       })
     );
