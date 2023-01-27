@@ -3,7 +3,7 @@
 }
 
 .nv-file-over {
-  border: dotted 3px #20c997;
+  border: dotted 3px green;
 }
 
 input[type="file"] {
