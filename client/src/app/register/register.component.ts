@@ -41,12 +41,13 @@ export class RegisterComponent implements OnInit {
         this.matchValues('password'),
       ]),
     });
+    //check the password field changes the value
     this.registerForm.controls['password'].valueChanges.subscribe({
       next: () =>
         this.registerForm.controls['confirmPassword'].updateValueAndValidity(),
     });
   }
-
+  //match both password and confirm password is equal
   matchValues(matchTo: string): ValidatorFn {
     return (control: AbstractControl) => {
       return control.value === control.parent?.get(matchTo)?.value
