@@ -5,7 +5,7 @@
 
       <form
         class="mx-1 mx-md-4"
-        #registerForm="ngForm"
+        [formGroup]="registerForm"
         (ngSubmit)="register()"
         autocomplete="off"
       >
@@ -15,11 +15,10 @@
           <div class="form-outline flex-fill mb-0">
             <input
               type="text"
-              name="username"
+              formControlName="username"
               id="form3Example1c"
               class="form-control"
               placeholder="Your Name"
-              [(ngModel)]="model.username"
             />
           </div>
         </div>
@@ -34,10 +33,9 @@
           <div class="form-outline flex-fill mb-0">
             <input
               type="password"
-              name="password"
+              formControlName="password"
               class="form-control"
               placeholder="password"
-              [(ngModel)]="model.password"
             />
           </div>
         </div>
@@ -48,6 +46,7 @@
             <input
               type="password"
               id="form3Example4cd"
+              formControlName="confirmPassword"
               class="form-control"
               placeholder="Repeat your password"
             />
@@ -76,6 +75,9 @@
           </button>
         </div>
       </form>
+
+      <p>Form value: {{ registerForm.value | json }}</p>
+      <p>Form value: {{ registerForm.status | json }}</p>
     </div>
     <div
       class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
