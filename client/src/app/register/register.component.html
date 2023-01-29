@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container shadow p-3 mb-5 bg-white rounded border border-white">
   <div class="row justify-content-center">
     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
@@ -14,12 +14,17 @@
           </i-bs>
           <div class="form-outline flex-fill mb-0">
             <input
+              [class.is-invalid]="
+                registerForm.get('username')?.errors &&
+                registerForm.get('username')?.touched
+              "
               type="text"
               formControlName="username"
               id="form3Example1c"
               class="form-control"
               placeholder="Your Name"
             />
+            <div class="invalid-feedback">Please enter a username</div>
           </div>
         </div>
 
@@ -32,11 +37,33 @@
           ></i-bs>
           <div class="form-outline flex-fill mb-0">
             <input
+              [class.is-invalid]="
+                registerForm.get('password')?.errors &&
+                registerForm.get('password')?.touched
+              "
               type="password"
               formControlName="password"
               class="form-control"
               placeholder="password"
             />
+            <div
+              class="invalid-feedback"
+              *ngIf="registerForm.get('password')?.hasError('required')"
+            >
+              Please enter a password
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="registerForm.get('password')?.hasError('minlength')"
+            >
+              Password must be at least 4 characters
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="registerForm.get('password')?.hasError('maxlength')"
+            >
+              Password must be at least 8 characters
+            </div>
           </div>
         </div>
 
@@ -44,12 +71,30 @@
           <i-bs name="key" width="1.5rem" height="1.5rem" class="mx-4"></i-bs>
           <div class="form-outline flex-fill mb-0">
             <input
+              [class.is-invalid]="
+                registerForm.get('confirmPassword')?.errors &&
+                registerForm.get('confirmPassword')?.touched
+              "
               type="password"
               id="form3Example4cd"
               formControlName="confirmPassword"
               class="form-control"
               placeholder="Repeat your password"
             />
+            <div
+              class="invalid-feedback"
+              *ngIf="registerForm.get('confirmPassword')?.hasError('required')"
+            >
+              Please enter a confirm password
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="
+                registerForm.get('confirmPassword')?.hasError('notMatching')
+              "
+            >
+              Confirm password must match with password
+            </div>
           </div>
         </div>
 
@@ -83,8 +128,8 @@
       class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
     >
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-        class="img-fluid rounded mx-auto d-block"
+        src="./assets/images/movie_login.avif"
+        class="img-fluid mx-auto d-block"
         alt="Sample image"
       />
     </div>
