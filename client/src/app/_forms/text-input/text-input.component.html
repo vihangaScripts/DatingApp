@@ -1,0 +1,23 @@
+<div class="form-outline flex-fill mb-0">
+  <input
+    [class.is-invalid]="ngControl.touched && ngControl.invalid"
+    type="{{ type }}"
+    [formControl]="control"
+    class="form-control"
+    placeholder="{{ label }}"
+  />
+  <div class="invalid-feedback" *ngIf="control.errors?.['required']">
+    Please enter a {{ label }}
+  </div>
+  <div class="invalid-feedback" *ngIf="control.errors?.['minlength']">
+    {{ label }} must be at least
+    {{control.errors?.['minlength'].requiredLength}} characters
+  </div>
+  <div class="invalid-feedback" *ngIf="control.errors?.['maxlength']">
+    {{ label }} must be at least
+    {{control.errors?.['maxlength'].requiredLength}} characters
+  </div>
+  <div class="invalid-feedback" *ngIf="control.errors?.['notMatching']">
+    Passwords do not match
+  </div>
+</div>
